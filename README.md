@@ -1,5 +1,7 @@
 # NeuroCare API
 
+![CI](https://github.com/Mohinii226/neurocare-api/actions/workflows/ci.yml/badge.svg)
+
 A small FastAPI service that serves my NeuroCare migraine-subtype classifier (XGBoost, 7 classes, 23 coded symptom features) as a REST API. It is packaged with Docker and tested with pytest and GitHub Actions.
 
 > **Research prototype.** The model was trained on a small public dataset (400 records, 80-record test set). It is not a medical device and must not be used for clinical decisions. The 7-day LSTM from my NeuroCare project is **not** served here, because its labels were simulated.
@@ -16,6 +18,17 @@ A small FastAPI service that serves my NeuroCare migraine-subtype classifier (XG
 An example request body is in `examples/sample_request.json`. The response contains `predicted_class`, `confidence` and the probability of each class.
 
 `confidence` is the model's own probability for its top class. It is not the chance that a migraine attack will happen, and small models are often over-confident. The API gives no medical advice.
+
+## Demo
+Screenshots from running the service locally.
+
+![Health check showing the model loaded](docs/health.png)
+
+![Swagger UI with the three endpoints](docs/swagger-docs.png)
+
+![Prediction response for a made-up example patient](docs/predict-response.png)
+
+The example patient is made up. `confidence` is the model's probability for its top class, not the risk of a migraine attack.
 
 ## What I built and checked
 - Input validation: missing or unexpected features are rejected, and `/predict` returns 503 if the model could not be loaded.
