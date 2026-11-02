@@ -1,0 +1,8 @@
+{
+  "features": {
+    "Age": 30, "Duration": 2, "Frequency": 3, "Location": 1, "Character": 1, "Intensity": 3,
+    "Nausea": 1, "Vomit": 0, "Phonophobia": 1, "Photophobia": 1, "Visual": 1, "Sensory": 0,
+    "Dysphasia": 0, "Dysarthria": 0, "Vertigo": 0, "Tinnitus": 0, "Hypoacusis": 0,
+    "Diplopia": 0, "Defect": 0, "Ataxia": 0, "Conscience": 0, "Paresthesia": 0, "DPF": 0
+  }
+}

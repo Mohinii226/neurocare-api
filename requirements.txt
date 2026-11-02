@@ -1,0 +1,10 @@
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29
+pydantic>=2.6,<3.0
+numpy>=2.0
+pandas>=2.1
+joblib>=1.3
+imbalanced-learn>=0.13
+# Pinned to the versions your Colab notebook saved the model with (pickles are version-sensitive):
+scikit-learn==1.6.1
+xgboost==3.2.0
